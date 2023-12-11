@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../features/account/presentation/account_page.dart';
-import '../../features/bills/presentation/bills_page.dart';
-import '../../features/bills/presentation/latest_page.dart';
-import '../models/destination.dart';
+import '../features/account/ui/account_page.dart';
+import '../features/bills/ui/bills_page.dart';
+import '../features/bills/ui/latest_page.dart';
+import '../utils/routing/models/destination.dart';
 
 class Paths {
   static const String activity = '/activity';

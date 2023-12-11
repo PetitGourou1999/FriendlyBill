@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../constants/constants.dart';
+import '../../../constants/navigation.dart';
 import '../models/destination.dart';
 import '../presentation/bottom_nav_page.dart';
 
-class NavigationService {
+class NavigationProvider {
   static final GlobalKey<NavigatorState> _rootNavigatorKey =
       GlobalKey<NavigatorState>();
   static late final List<Destination> _allDestinations;
@@ -13,14 +13,14 @@ class NavigationService {
 
   static late final GoRouter router;
 
-  static final NavigationService _instance = NavigationService._internal();
+  static final NavigationProvider _instance = NavigationProvider._internal();
 
-  static NavigationService get instance => _instance;
-  factory NavigationService() {
+  static NavigationProvider get instance => _instance;
+  factory NavigationProvider() {
     return _instance;
   }
 
-  NavigationService._internal() {
+  NavigationProvider._internal() {
     _allDestinations = AvailableDestinations.availableDestinations;
     _navigatorKeys = List<GlobalKey<NavigatorState>>.generate(
         _allDestinations.length, (int index) => GlobalKey()).toList();

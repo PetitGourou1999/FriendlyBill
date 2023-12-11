@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
-import './src/routing/services/navigation_service.dart';
+import 'src/features/theme/services/theme_provider.dart';
+import 'src/utils/routing/services/navigation_provider.dart';
 
-void main() {
-  NavigationService.instance;
+void main() async {
+  await initializeServices();
   runApp(const MyApp());
+}
+
+Future<void> initializeServices() async {
+  NavigationProvider.instance;
+  await ThemeProvider.instance;
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +20,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: NavigationService.router,
+      routerConfig: NavigationProvider.router,
+      theme: ThemeProvider.theme,
     );
   }
 }
