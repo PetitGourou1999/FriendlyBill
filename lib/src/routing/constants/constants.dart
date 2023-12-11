@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../features/bills/bill_page.dart';
+import '../../features/account/presentation/account_page.dart';
+import '../../features/bills/presentation/bills_page.dart';
+import '../../features/bills/presentation/latest_page.dart';
 import '../models/destination.dart';
 
 class Paths {
@@ -12,10 +14,9 @@ class Paths {
 class AvailableDestinations {
   static const List<Destination> availableDestinations = <Destination>[
     Destination(0, 'Activity', Icons.format_list_bulleted, Paths.activity,
-        MyHomePage(title: 'Activity')),
+        LatestPage()),
+    Destination(1, 'Bills', Icons.receipt, Paths.bills, BillsPage()),
     Destination(
-        1, 'Bills', Icons.receipt, Paths.bills, MyHomePage(title: 'Bills')),
-    Destination(2, 'Account', Icons.account_circle, Paths.account,
-        MyHomePage(title: 'Account')),
+        2, 'Account', Icons.account_circle, Paths.account, AccountPage()),
   ];
 }
