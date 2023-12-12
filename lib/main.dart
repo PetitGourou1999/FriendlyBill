@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'src/features/theme/services/theme_provider.dart';
+import 'src/utils/api/services/api_config_provider.dart';
 import 'src/utils/routing/services/navigation_provider.dart';
 
 void main() async {
@@ -11,6 +12,7 @@ void main() async {
 Future<void> initializeServices() async {
   NavigationProvider.instance;
   await ThemeProvider.instance;
+  APIConfigurationProvider.instance;
 }
 
 class MyApp extends StatelessWidget {

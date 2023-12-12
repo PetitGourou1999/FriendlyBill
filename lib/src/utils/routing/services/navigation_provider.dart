@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../constants/navigation.dart';
-import '../models/destination.dart';
-import '../presentation/bottom_nav_page.dart';
+import '../beans/destination.dart';
+import '../ui/bottom_nav_page.dart';
 
 class NavigationProvider {
   static final GlobalKey<NavigatorState> _rootNavigatorKey =
@@ -21,7 +21,7 @@ class NavigationProvider {
   }
 
   NavigationProvider._internal() {
-    _allDestinations = AvailableDestinations.availableDestinations;
+    _allDestinations = DestinationsConstants.availableDestinations;
     _navigatorKeys = List<GlobalKey<NavigatorState>>.generate(
         _allDestinations.length, (int index) => GlobalKey()).toList();
 
@@ -58,7 +58,7 @@ class NavigationProvider {
 
     router = GoRouter(
       navigatorKey: _rootNavigatorKey,
-      initialLocation: Paths.bills,
+      initialLocation: RoutesConstants.bills,
       routes: routes,
     );
   }
