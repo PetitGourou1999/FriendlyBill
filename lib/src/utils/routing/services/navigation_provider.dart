@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../constants/navigation.dart';
-import '../beans/destination.dart';
+import '../../../constants/routing.dart';
 import '../ui/bottom_nav_page.dart';
+import '../wrappers/destination.dart';
 
 class NavigationProvider {
   static final GlobalKey<NavigatorState> _rootNavigatorKey =

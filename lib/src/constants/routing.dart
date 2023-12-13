@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../features/account/ui/account_page.dart';
 import '../features/bills/ui/bills_page.dart';
 import '../features/bills/ui/latest_page.dart';
-import '../utils/routing/beans/destination.dart';
+import '../utils/routing/wrappers/destination.dart';
 
 class RoutesConstants {
   static const String activity = '/activity';

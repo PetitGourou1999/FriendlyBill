@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import '../../../constants/api.dart';
-import '../beans/api_config.dart';
+import '../wrappers/api_config.dart';
 
 class APIConfigurationProvider {
   static late final APIConfiguration configuration;
