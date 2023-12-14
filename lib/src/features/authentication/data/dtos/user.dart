@@ -8,7 +8,10 @@ class UserDTO {
   String password;
 
   factory UserDTO.fromJson(Map<String, dynamic> json) => UserDTO(
-      json["firstname"], json["surname"], json["email"], json["password"]);
+      json["firstname"],
+      json["surname"],
+      json["email"],
+      json["password"] ?? "");
 
   Map<String, dynamic> toJson() => {
         "firstname": firstname,
